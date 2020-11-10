@@ -59,8 +59,8 @@
                 <a href="#" id="createPost" class="btn btn-success createblog"  >Create Blog +</a>
             </li>
             <li class="nav-link">
-                <a href="#" class="btn btn-info btn-lg myprofile">
-                  &#xf007;
+                <a href="#" class="myprofile" id="profileid">
+                  ViewProfile
                   </a>
             </li>
 
@@ -114,51 +114,7 @@
                 <input type="search" name="search" id="searchtitle" placeholder="search on the basis of title" maxlength="50">
                 <div id="text" class="title-search-result"></div>
              </div>
-              <!-- profile start -->
-            <div class="myprofileDisp">
-             <div class="container " >
-                <div class="fb-profile">
-                  <img
-                    align="left"
-                    class="fb-image-lg"
-                    src="./assets/profile/blogFinal.webp"
-                    alt="Profile image example"
-                    height="250"
-                  />
-                  <img
-                    align="left"
-                    class="fb-image-profile thumbnail"
-                    src="./assets/profile/pngtree-user-icon-png-image_1796659.jpg"
-                    alt="Profile image example"
-                  />
-                  <div class="fb-profile-text">       
-                    <h1 id="userName"></h1>
-                    <p>
-                      The first step in blogging is not writing them but reading them.
-                    </p>
-                  </div>
-                </div>
-              </div>
-             <!-- container for user's posts -->
-            
-              <div class="column-layout"> 
-                <div class="info-column">
-                  
-                  
-                  <p id="sp1" class="details"><i class="fa fa-user-circle"></i>First name:</p><br />
-                 
-                  <p id="sp2" class="details"><i class="fa fa-envelope"></i>Email:</p><br />
-                  <p id="sp3" class="details"><i class="fa fa-user-o"></i>Gender:</p><br />
-               
-              </div>
-              
-           
-              <div class="post-column" id="post-column">
-                <h2>Posts</h2>
-              </div>
-          </div>
-        </div>
-          <!-- profile Ends -->
+       
 
 
              <div class="mydiv">
@@ -415,7 +371,51 @@
 </main>
 <!-- main section -->
 
-
+       <!-- profile start -->
+       <div class="myprofileDisp">
+        <div class="container " >
+           <div class="fb-profile">
+             <img
+               align="left"
+               class="fb-image-lg"
+               src="./assets/profile/blogFinal.webp"
+               alt="Profile image example"
+               height="250"
+             />
+             <img
+               align="left"
+               class="fb-image-profile thumbnail"
+               src="./assets/profile/pngtree-user-icon-png-image_1796659.jpg"
+               alt="Profile image example"
+             />
+             <div class="fb-profile-text">       
+               <h1 id="userName"></h1>
+               <p>
+                 The first step in blogging is not writing them but reading them.
+               </p>
+             </div>
+           </div>
+         </div>
+        <!-- container for user's posts -->
+       
+         <div class="column-layout"> 
+           <div class="info-column">
+             
+             
+             <p id="sp1" class="details"><i class="fa fa-user-circle"></i>First name:</p><br />
+            
+             <p id="sp2" class="details"><i class="fa fa-envelope"></i>Email:</p><br />
+             <p id="sp3" class="details"><i class="fa fa-user-o"></i>Gender:</p><br />
+          
+         </div>
+         
+      
+         <div class="post-column" id="post-column">
+           <h2>Posts</h2>
+         </div>
+     </div>
+   </div>
+     <!-- profile Ends -->
 
 <!-- owl-carousel js -->
 <script src="./js/owl.carousel.min.js"></script>

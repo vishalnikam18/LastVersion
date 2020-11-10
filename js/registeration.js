@@ -1,9 +1,8 @@
 $("document").ready(() => {
   $('.content').richText();
+  
+  
 
-
-  $("#mylogOutButton").hide();
-  $(".myprofile").hide();
   if(sessionStorage.getItem("user")!=null)
   {
     $(".searchbar").show();
@@ -12,8 +11,13 @@ $("document").ready(() => {
     $("#createPost").show();
     $("#mysingUpButton").hide();
     $("#mylogOutButton").show();
-    $(".myprofile").show();
+    $('#profileid').show();
 
+  }
+  else
+  {
+    $('#profileid').hide();
+    $("#mylogOutButton").hide();
   }
 
 
@@ -106,6 +110,10 @@ $("#mylogOutButton").click(()=>{
    $('#mylogButton').show(); 
    $('#texteditor').hide();
    $('.createblog').hide();
+   $('.myprofileDisp').hide();
+   $('#profileid').hide();
+   $('main').show();
+   
 
 });
 
@@ -116,7 +124,7 @@ $("#mylogOutButton").click(()=>{
     var mail = $("#mymail").val();
     var pass = $("#password").val();
 
-    var encryptedPass = CryptoJS.AES.encrypt(pass, "Secret Passphrase");
+    // var encryptedPass = CryptoJS.AES.encrypt(pass, "Secret Passphrase");
     var gend = $('input[name="gender"]:checked').val();
     console.log("hi"+name + " " + mail);
 
@@ -180,6 +188,8 @@ $("#mylogOutButton").click(()=>{
           $("#mylogOutButton").show();
           $(".searchbar").show();
           $(".createblog").show();
+          $('#profileid').show();
+        
           
           var a = JSON.parse(sessionStorage.getItem("user"));
           console.log("hello" + a.name);
@@ -251,9 +261,9 @@ $(".createblog").click(function(){
  $(".myprofile").click(()=>{
           
  
-      
+  $("main").hide();
        $(".myprofileDisp").show();
-       $(".searchbar").hide();
+       
        var sessionName = JSON.parse(sessionStorage.getItem("user"));
 
  $("#userName").html(sessionName.name);
@@ -276,7 +286,7 @@ $(".createblog").click(function(){
        document.getElementById("post-column").innerHTML += content;
 
        $(".deleteContent").click((a)=>{
-      a.preventDefault();
+      // a.preventDefault();
         $.ajax({
           url: "http://localhost:3000/posts/" + value.id,
           method: "DELETE",
